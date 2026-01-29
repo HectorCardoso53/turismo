@@ -1,0 +1,151 @@
+* {
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #F5F7FA;
+  color: #1a1a1a;
+}
+
+/* HEADER */
+/* HEADER BASE */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background: linear-gradient(90deg, #0B3C88, #082f66);
+  padding: 14px 16px;
+
+  transition: all 0.3s ease;
+}
+
+/* CONTEÚDO */
+.header-inner {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* LOGO */
+.header-logo {
+  width: 60px;
+  height: 60px;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 6px;
+  transition: all 0.3s ease;
+}
+
+/* TEXTOS */
+.header-orgao {
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #e6e6e6;
+}
+
+.header-titulo {
+  margin: 2px 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: #F2C200;
+  transition: all 0.3s ease;
+}
+
+.header-slogan {
+  margin: 0;
+  font-size: 13px;
+  color: #ffffff;
+  opacity: 0.9;
+}
+
+/* ESTADO AO ROLAR */
+.site-header.scrolled {
+  background: rgba(11, 60, 136, 0.75);
+  backdrop-filter: blur(8px);
+  padding: 8px 16px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+.site-header.scrolled .header-logo {
+  width: 44px;
+  height: 44px;
+}
+
+.site-header.scrolled .header-titulo {
+  font-size: 20px;
+}
+
+.site-header.scrolled .header-slogan {
+  display: none;
+}
+
+/* FOOTER FINO */
+.site-footer {
+  background: #082f66;
+  color: #ffffff;
+  padding: 12px 16px; /* mais fino */
+  margin-top: 24px;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+  font-size: 13px;
+}
+
+.footer-inner p {
+  margin: 4px 0;
+}
+
+.footer-inner strong {
+  font-weight: 600;
+}
+
+.footer-copy {
+  font-size: 11px;
+  opacity: 0.8;
+}
+
+
+@media (max-width: 600px) {
+  .header-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header-logo {
+    margin-bottom: 8px;
+  }
+
+  .header-titulo {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-inner {
+    gap: 10px;
+  }
+
+  .header-logo {
+    width: 48px;
+    height: 48px;
+  }
+
+  .header-titulo {
+    font-size: 20px;
+  }
+
+  .site-header.scrolled .header-logo {
+    width: 38px;
+    height: 38px;
+  }
+}
+
