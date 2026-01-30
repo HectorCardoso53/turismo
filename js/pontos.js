@@ -6,9 +6,10 @@ const pontosTuristicos = [
     lat: -1.762874,
     lng: -55.8626643,
     pagina: "pontos/cristo-intercessor.html",
+    referencia: "img/referencia/Intercessor.png",
     icon: "✝️",
-    top: "40%",
-    left: "48%"
+    top: "55%",
+    left: "60%"
   },
   {
     id: "bosque-das-memorias",
@@ -17,9 +18,10 @@ const pontosTuristicos = [
     lat: -1.77611,
     lng: -55.8614844,
     pagina: "pontos/bosque-das-memorias.html",
+    referencia: "img/referencia/bosque.png",
     icon: "🌳",
-    top: "25%",
-    left: "25%"
+    top: "80%",
+    left: "48%"
   },
   {
     id: "aeroporto",
@@ -29,8 +31,8 @@ const pontosTuristicos = [
     lng: -55.835727,
     pagina: "pontos/aeroporto.html",
     icon: "✈️",
-    top: "18%",
-    left: "75%"
+    top: "10%",
+    left: "88%"
   },
   {
     id: "mirante-novo-horizonte",
@@ -50,9 +52,10 @@ const pontosTuristicos = [
     lat: -1.7696349,
     lng: -55.8591053,
     pagina: "pontos/praca-centenario.html",
+    referencia: "img/referencia/centenario.png",
     icon: "🏛️",
-    top: "55%",
-    left: "48%"
+    top: "80%",
+    left: "60%"
   },
   {
     id: "praca-da-saudade",
@@ -62,8 +65,8 @@ const pontosTuristicos = [
     lng: -55.8708186,
     pagina: "pontos/praca-da-saude.html",
     icon: "🕊️",
-    top: "58%",
-    left: "38%"
+    top: "55%",
+    left: "35%"
   },
   {
     id: "praca-santo-antonio",
@@ -72,9 +75,10 @@ const pontosTuristicos = [
     lat: -1.7675518,
     lng: -55.868028,
     pagina: "pontos/praca-santo-antonio.html",
+    referencia: "img/referencia/praca_santo_antonio.png",
     icon: "⛪",
-    top: "55%",
-    left: "60%"
+    top: "69%",
+    left: "47%"
   },
   {
     id: "complexo-esportivo",
@@ -84,8 +88,8 @@ const pontosTuristicos = [
     lng: -55.8512286,
     pagina: "pontos/complexo-esportivo.html",
     icon: "🏟️",
-    top: "70%",
-    left: "65%"
+    top: "35%",
+    left: "62%"
   },
   {
     id: "parque-exposicao",
@@ -95,8 +99,8 @@ const pontosTuristicos = [
     lng: -55.8499679,
     pagina: "pontos/parque-exposicao.html",
     icon: "🎪",
-    top: "75%",
-    left: "78%"
+    top: "5%",
+    left: "8%"
   },
   {
     id: "orla-da-cidade",
@@ -105,6 +109,7 @@ const pontosTuristicos = [
     lat: -1.769976,
     lng: -55.8683002,
     pagina: "pontos/orla-da-cidade.html",
+    referencia: "img/referencia/orla.png",
     icon: "🌊",
     top: "75%",
     left: "40%"

@@ -1,63 +1,127 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-    <title>Mirante Novo Horizonte | Oriximiná</title>
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/pontos.css">
+  <meta charset="UTF-8">
+  <title>Mirante Novo Horizonte | Oriximiná</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/pontos.css">
 </head>
 
 <body>
 
-    <header class="topo-ponto">
-        <a href="../index.html" class="voltar">← Voltar ao mapa</a>
-        <h1>Mirante Novo Horizonte</h1>
-    </header>
+<header class="site-header">
+  <div class="header-inner">
+    <img src="../img/prefeitura.png" alt="Prefeitura de Oriximiná" class="header-logo">
 
-    <main class="conteudo-ponto">
-        <img src="../img/pontos/mirante.jpg" class="imagem-ponto">
+    <div class="header-text">
+      <span class="header-orgao">Prefeitura Municipal de Oriximiná</span>
+      <h1 class="header-titulo">Mirante Novo Horizonte</h1>
+    </div>
+  </div>
+</header>
 
-        <p class="descricao">
-            Mirante com vista panorâmica da cidade, ideal para contemplação e fotos.
-        </p>
+<main class="conteudo-ponto">
 
-        <button class="btn-rota" onclick="abrirRota(-1.7538012, -55.8735667)">
-            🧭 Como chegar
-        </button>
+  <a href="../index.html" class="voltar">← Voltar ao mapa</a>
 
-        <section class="proximos">
-            <h2>O que tem por perto?</h2>
-            <div class="lista-proximos">
-                <div class="card-proximo">
-                    <h3>🍽️ Restaurantes</h3>
-                    <ul>
-                        <li><a target="_blank"
-                                href="https://www.google.com/maps/search/?api=1&query=Restaurante+Oriximiná">Restaurantes
-                                próximos</a></li>
-                    </ul>
-                </div>
-                <div class="card-proximo">
-                    <h3>🏨 Hotéis</h3>
-                    <ul>
-                        <li><a target="_blank"
-                                href="https://www.google.com/maps/search/?api=1&query=Hotel+Oriximiná">Hotéis
-                                próximos</a></li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <section class="dica">
-            <h2>💡 Dica ao visitante</h2>
-            <p>
-                Prefira visitar durante o dia e aproveite para conhecer outros pontos
-                próximos no mapa turístico.
-            </p>
-        </section>
+  <!-- imagem destaque -->
+  <img
+    src="../img/pontos/mirante-NH/m1.jpg"
+    alt="Mirante Novo Horizonte em Oriximiná"
+    class="imagem-ponto"
+  >
 
-    </main>
+  <p class="descricao">
+    O Mirante Novo Horizonte oferece uma vista panorâmica da cidade de Oriximiná,
+    sendo um ponto ideal para contemplação da paisagem, registro fotográfico
+    e apreciação do pôr do sol.
+  </p>
 
-    <script src="../js/rotas.js"></script>
+  <!-- GALERIA -->
+  <section class="carrossel">
+    <h2>Galeria de Fotos</h2>
+
+    <div class="carrossel-wrapper">
+      <button class="carrossel-btn prev" aria-label="Anterior">‹</button>
+
+      <div class="carrossel-track">
+        <img src="../img/pontos/mirante-NH/m1.jpg" alt="Mirante Novo Horizonte">
+        <img src="../img/pontos/mirante-NH/m2.jpg" alt="Mirante Novo Horizonte">
+        <img src="../img/pontos/mirante-NH/m3.jpg" alt="Mirante Novo Horizonte">
+        <img src="../img/pontos/mirante-NH/m4.jpg" alt="Mirante Novo Horizonte">
+        <img src="../img/pontos/mirante-NH/m5.jpg" alt="Mirante Novo Horizonte">
+        <img src="../img/pontos/mirante-NH/m6.jpg" alt="Mirante Novo Horizonte">
+      </div>
+
+      <button class="carrossel-btn next" aria-label="Próximo">›</button>
+    </div>
+  </section>
+
+  <!-- ROTA -->
+  <button
+    class="btn-rota"
+    onclick="abrirRota(-1.7538012, -55.8735667)">
+    Como chegar
+  </button>
+
+  <!-- SERVIÇOS -->
+  <section class="proximos">
+    <h2>Serviços nas proximidades</h2>
+
+    <div class="lista-proximos">
+      <div class="card-proximo">
+        <h3>Alimentação</h3>
+        <ul>
+          <li>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Restaurante+Oriximiná"
+              target="_blank">
+              Restaurantes próximos
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="card-proximo">
+        <h3>Hospedagem</h3>
+        <ul>
+          <li>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Hotel+Oriximiná"
+              target="_blank">
+              Hotéis próximos
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORIENTAÇÕES -->
+  <section class="dica">
+    <h2>Orientações ao visitante</h2>
+    <p>
+      Recomenda-se visitar em horários de boa visibilidade,
+      evitar permanência em períodos noturnos e respeitar
+      as áreas de preservação ambiental.
+    </p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>© 2026 • Prefeitura Municipal de Oriximiná – PA</p>
+  </div>
+</footer>
+
+<script src="../js/header.js"></script>
+<script src="../js/carrossel.js"></script>
+<script src="../js/lightbox.js"></script>
+<script src="../js/rotas.js"></script>
+
 </body>
-
 </html>
