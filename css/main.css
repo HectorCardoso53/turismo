@@ -64,6 +64,12 @@ body {
   opacity: 0.9;
 }
 
+.site-header,
+.site-footer {
+  width: 100%;
+}
+
+
 /* ESTADO AO ROLAR */
 .site-header.scrolled {
   background: rgba(11, 60, 136, 0.75);

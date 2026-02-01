@@ -1,8 +1,9 @@
 .conteudo-ponto {
-  max-width: 900px;
-  margin: 24px auto;
-  padding: 0 16px;
+  max-width: 980px;        /* dá mais respiro */
+  margin: 32px auto 48px; /* melhor espaçamento vertical */
+  padding: 0 20px;
 }
+
 
 .voltar {
   display: inline-block;
@@ -18,8 +19,15 @@
 
 .imagem-ponto {
   width: 100%;
-  border-radius: 14px;
-  margin-bottom: 20px;
+  max-height: 420px;        /* 🔥 padroniza todas */
+  object-fit: cover;       /* corta sem distorcer */
+  object-position: center;
+
+  border-radius: 16px;
+  margin-bottom: 24px;
+  display: block;
+
+  box-shadow: 0 8px 20px rgba(0,0,0,.25);
 }
 
 .descricao {
@@ -32,10 +40,22 @@
   background: #0B3C88;
   color: #fff;
   border: none;
-  padding: 14px 20px;
-  border-radius: 12px;
+  padding: 14px 24px;
+  border-radius: 14px;
   font-size: 16px;
+  font-weight: 600;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  box-shadow: 0 6px 14px rgba(0,0,0,.25);
   cursor: pointer;
+}
+
+.btn-rota:hover {
+  background: #082f66;
+  transform: translateY(-1px);
 }
 
 .btn-rota:hover {
@@ -186,4 +206,11 @@
     height: 150px;
   }
 }
+
+  .imagem-ponto {
+    max-height: 260px;
+    border-radius: 12px;
+  }
+
+
 

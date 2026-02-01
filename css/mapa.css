@@ -1,23 +1,27 @@
 body {
   margin: 0;
-  background: #f5f7fa; /* cinza claro institucional */
+  background: #082f66; /* azul institucional */
 }
 
 /* container do mapa */
+/* container do mapa – tela cheia */
 .mapa-container {
   position: relative;
-  max-width: 1400px;
-  margin: 24px auto;
+  width: 100vw;        /* ocupa TODA a largura da tela */
+  margin: 0;           /* remove margens */
+  padding: 0;
+  overflow: hidden;    /* evita scroll lateral */
 }
 
-/* mapa base (fundo) */
+
+/* mapa base em tela cheia */
 .mapa-base {
   width: 100%;
+  height: auto;
   display: block;
-  border-radius: 12px;
-  position: relative;
-  z-index: 1;
+  border-radius: 0;    /* REMOVE cantos arredondados */
 }
+
 
 /* imagem de referência (pequena, atrás dos pontos) */
 .mapa-referencia.pequena {
@@ -43,22 +47,30 @@ body {
 /* pontos clicáveis */
 .ponto {
   position: absolute;
-  z-index: 3;             /* sempre acima de tudo */
+  z-index: 3;
 
-  width: 38px;
-  height: 38px;
-  background: #ffffff;
+  width: 40px;
+  height: 40px;
+
+  background: rgba(255, 255, 255, 0.95); /* fundo forte */
+  border: 2px solid #0B3C88;             /* contraste institucional */
   border-radius: 50%;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  box-shadow: 0 4px 10px rgba(0,0,0,.3);
-  cursor: pointer;
+  color: #0B3C88;
+  font-size: 18px;
 
-  transition: transform .2s, background .2s;
+  box-shadow:
+    0 4px 10px rgba(0,0,0,.35),
+    0 0 0 3px rgba(255,255,255,.6); /* halo branco */
+
+  cursor: pointer;
+  transition: transform .2s ease, background .2s ease;
 }
+
 
 .ponto:hover {
   transform: scale(1.15);
@@ -80,21 +92,50 @@ body {
   transform: translate(-50%, -50%);
   cursor: pointer;
   text-decoration: none;
+  
 }
+
+
 
 .ponto-imagem img {
   width: 120px;
   height: auto;
 
-  border-radius: none;   /* mantém cantos suaves */
-  border: none;          /* REMOVE a borda */
-  background: transparent; /* REMOVE fundo branco */
+  border-radius: 50%;   /* ← SÓ ISSO */
+  border: none;
+  background: transparent;
 
-  box-shadow: 0 6px 14px rgba(0,0,0,.25);
   transition: transform .2s, box-shadow .2s;
 }
 
 .ponto-imagem:hover img {
-  transform: scale(1.08);
-  box-shadow: 0 10px 22px rgba(0,0,0,.35);
+  transform: scale(1.04);
+}
+
+/* MOBILE – ajustes dos pontos */
+@media (max-width: 768px) {
+
+  .ponto {
+    width: 26px;
+    height: 26px;
+    box-shadow: 0 3px 6px rgba(0,0,0,.25);
+  }
+
+  .ponto img,
+  .ponto svg {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .ponto-imagem img {
+    width: 32px; /* antes era 120px */
+    box-shadow: 0 4px 10px rgba(0,0,0,.22);
+  }
+
+  .ponto-imagem:hover img {
+    transform: scale(1.04);
+  }
 }

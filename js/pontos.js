@@ -42,8 +42,8 @@ const pontosTuristicos = [
     lng: -55.8735667,
     pagina: "pontos/mirante-novo-horizonte.html",
     icon: "🏞️",
-    top: "15%",
-    left: "55%"
+    top: "45%",
+    left: "25%"
   },
   {
     id: "praca-centenario",
@@ -99,8 +99,8 @@ const pontosTuristicos = [
     lng: -55.8499679,
     pagina: "pontos/parque-exposicao.html",
     icon: "🎪",
-    top: "5%",
-    left: "8%"
+    top: "85%",
+    left: "65%"
   },
   {
     id: "orla-da-cidade",
