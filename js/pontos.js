@@ -1,16 +1,18 @@
 const pontosTuristicos = [
   {
-    id: "cristo-intercessor",
-    nome: "Cristo Intercessor",
-    categoria: "religioso",
-    lat: -1.762874,
-    lng: -55.8626643,
-    pagina: "pontos/cristo-intercessor.html",
-    referencia: "img/referencia/Intercessor.png",
-    icon: "✝️",
-    top: "55%",
-    left: "60%"
-  },
+  id: "cristo-intercessor",
+  nome: "Cristo Intercessor",
+  categoria: "religioso",
+  lat: -1.762874,
+  lng: -55.8626643,
+  pagina: "pontos/cristo-intercessor.html", // ✅ agora abre a página
+  referencia: "img/referencia/Intercessor.png",
+  icon: "✝️",
+  top: "55%",
+  left: "60%",
+  status: "andamento"
+}
+,
   {
     id: "bosque-das-memorias",
     nome: "Bosque das Memórias",
@@ -30,9 +32,11 @@ const pontosTuristicos = [
     lat: -1.7156713,
     lng: -55.835727,
     pagina: "pontos/aeroporto.html",
+    referencia: "img/referencia/aeroporto.png",
     icon: "✈️",
     top: "10%",
-    left: "88%"
+    left: "88%",
+    status: "andamento"
   },
   {
     id: "mirante-novo-horizonte",
@@ -41,6 +45,7 @@ const pontosTuristicos = [
     lat: -1.7538012,
     lng: -55.8735667,
     pagina: "pontos/mirante-novo-horizonte.html",
+    referencia: "img/referencia/mirante_NH.png",
     icon: "🏞️",
     top: "45%",
     left: "25%"
@@ -64,9 +69,11 @@ const pontosTuristicos = [
     lat: -1.7644353,
     lng: -55.8708186,
     pagina: "pontos/praca-da-saude.html",
+    referencia: "img/referencia/saudade.png",
     icon: "🕊️",
     top: "55%",
-    left: "35%"
+    left: "35%",
+    status: "andamento"
   },
   {
     id: "praca-santo-antonio",
@@ -87,6 +94,7 @@ const pontosTuristicos = [
     lat: -1.7485479,
     lng: -55.8512286,
     pagina: "pontos/complexo-esportivo.html",
+    referencia: "img/referencia/complexo.png",
     icon: "🏟️",
     top: "35%",
     left: "62%"
@@ -98,6 +106,7 @@ const pontosTuristicos = [
     lat: -1.7779185,
     lng: -55.8499679,
     pagina: "pontos/parque-exposicao.html",
+    referencia: "img/referencia/parque.png",
     icon: "🎪",
     top: "85%",
     left: "65%"

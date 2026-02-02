@@ -2,14 +2,24 @@ const container = document.querySelector(".mapa-container");
 
 pontosTuristicos.forEach(ponto => {
 
-  // CASO 1 — ponto com IMAGEM
+  // CASO — ponto com IMAGEM
   if (ponto.referencia) {
     const link = document.createElement("a");
     link.classList.add("ponto-imagem");
 
     link.style.top = ponto.top;
     link.style.left = ponto.left;
-    link.href = ponto.pagina;
+
+    // 🔴 SE ESTIVER EM ANDAMENTO
+    if (ponto.status === "andamento") {
+      link.href = "#";
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        alert(`📍 ${ponto.nome}\n\n🚧 Conteúdo em andamento`);
+      });
+    } else {
+      link.href = ponto.pagina;
+    }
 
     const img = document.createElement("img");
     img.src = ponto.referencia;
@@ -20,7 +30,7 @@ pontosTuristicos.forEach(ponto => {
     return;
   }
 
-  // CASO 2 — ponto NORMAL (emoji)
+  // CASO — ponto normal (emoji)
   const el = document.createElement("a");
   el.classList.add("ponto");
   el.textContent = ponto.icon;
@@ -28,7 +38,16 @@ pontosTuristicos.forEach(ponto => {
 
   el.style.top = ponto.top;
   el.style.left = ponto.left;
-  el.href = ponto.pagina;
+
+  if (ponto.status === "andamento") {
+    el.href = "#";
+    el.addEventListener("click", (e) => {
+      e.preventDefault();
+      alert(`📍 ${ponto.nome}\n\n🚧 Conteúdo em andamento`);
+    });
+  } else {
+    el.href = ponto.pagina;
+  }
 
   container.appendChild(el);
 });

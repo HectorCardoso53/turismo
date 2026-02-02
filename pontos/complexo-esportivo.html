@@ -1,62 +1,139 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-    <title>Complexo Esportivo | Oriximiná</title>
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/pontos.css">
+  <meta charset="UTF-8">
+  <title>Complexo Esportivo | Oriximiná</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/pontos.css">
 </head>
 
 <body>
 
-    <header class="topo-ponto">
-        <a href="../index.html" class="voltar">← Voltar ao mapa</a>
-        <h1>Complexo Esportivo</h1>
-    </header>
+<header class="site-header">
+  <div class="header-inner">
+    <img src="../img/prefeitura.png" alt="Prefeitura de Oriximiná" class="header-logo">
 
-    <main class="conteudo-ponto">
-        <img src="../img/pontos/complexo.jpg" class="imagem-ponto">
+    <div class="header-text">
+      <span class="header-orgao">Prefeitura Municipal de Oriximiná</span>
+      <h1 class="header-titulo">Complexo Esportivo</h1>
+    </div>
+  </div>
+</header>
 
-        <p class="descricao">
-            Espaço destinado a práticas esportivas, eventos e atividades comunitárias.
-        </p>
+<main class="conteudo-ponto">
 
-        <button class="btn-rota" onclick="abrirRota(-1.7485479, -55.8512286)">
-            🧭 Como chegar
-        </button>
-        <section class="proximos">
-            <h2>O que tem por perto?</h2>
-            <div class="lista-proximos">
-                <div class="card-proximo">
-                    <h3>🍽️ Restaurantes</h3>
-                    <ul>
-                        <li><a target="_blank"
-                                href="https://www.google.com/maps/search/?api=1&query=Restaurante+Oriximiná">Restaurantes
-                                próximos</a></li>
-                    </ul>
-                </div>
-                <div class="card-proximo">
-                    <h3>🏨 Hotéis</h3>
-                    <ul>
-                        <li><a target="_blank"
-                                href="https://www.google.com/maps/search/?api=1&query=Hotel+Oriximiná">Hotéis
-                                próximos</a></li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <section class="dica">
-            <h2>💡 Dica ao visitante</h2>
-            <p>
-                Prefira visitar durante o dia e aproveite para conhecer outros pontos
-                próximos no mapa turístico.
-            </p>
-        </section>
+  <a href="../index.html" class="voltar">← Voltar ao mapa</a>
 
-    </main>
+  <!-- IMAGEM DESTAQUE -->
+  <img
+    src="../img/pontos/complexo/complexo.jpg"
+    alt="Complexo Esportivo de Oriximiná"
+    class="imagem-ponto"
+  >
 
-    <script src="../js/rotas.js"></script>
+  <p class="descricao">
+    O Complexo Esportivo é um importante espaço público destinado
+    à prática de atividades esportivas, realização de eventos
+    comunitários e promoção do lazer, contribuindo para a
+    qualidade de vida da população de Oriximiná.
+  </p>
+
+  <!-- GALERIA -->
+  <section class="carrossel">
+    <h2>Galeria de Fotos</h2>
+
+    <div class="carrossel-wrapper">
+      <button class="carrossel-btn prev" aria-label="Anterior">‹</button>
+
+      <div class="carrossel-track">
+        <img src="../img/pontos/complexo/complexo.jpg" alt="Complexo Esportivo">
+        <img src="../img/pontos/complexo/complexo1.jpg" alt="Complexo Esportivo">
+        <img src="../img/pontos/complexo/complexo2.jpg" alt="Complexo Esportivo">
+        <img src="../img/pontos/complexo/complexo3.jpg" alt="Complexo Esportivo">
+        <img src="../img/pontos/complexo/complexo4.jpg" alt="Complexo Esportivo">
+        <img src="../img/pontos/complexo/complexo5.jpg" alt="Complexo Esportivo">
+        <img src="../img/pontos/complexo/complexo6.jpg" alt="Complexo Esportivo">
+        <img src="../img/pontos/complexo/complexo7.jpg" alt="Complexo Esportivo">
+        <img src="../img/pontos/complexo/complexo8.jpg" alt="Complexo Esportivo">
+        <img src="../img/pontos/complexo/complexo9.jpg" alt="Complexo Esportivo">
+        <img src="../img/pontos/complexo/complexo10.jpg" alt="Complexo Esportivo">
+        <img src="../img/pontos/complexo/complexo11.jpg" alt="Complexo Esportivo">
+        <img src="../img/pontos/complexo/complexo12.jpg" alt="Complexo Esportivo">
+        <img src="../img/pontos/complexo/complexo13.jpg" alt="Complexo Esportivo">
+        <img src="../img/pontos/complexo/complexo14.jpg" alt="Complexo Esportivo">
+        <img src="../img/pontos/complexo/complexo15.jpg" alt="Complexo Esportivo">
+        <img src="../img/pontos/complexo/complexo16.jpg" alt="Complexo Esportivo">
+      </div>
+
+      <button class="carrossel-btn next" aria-label="Próximo">›</button>
+    </div>
+  </section>
+
+  <!-- ROTA -->
+  <button
+    class="btn-rota"
+    onclick="abrirRota(-1.7485479, -55.8512286)">
+    Como chegar
+  </button>
+
+  <!-- SERVIÇOS PRÓXIMOS -->
+  <section class="proximos">
+    <h2>Serviços nas proximidades</h2>
+
+    <div class="lista-proximos">
+      <div class="card-proximo">
+        <h3>Alimentação</h3>
+        <ul>
+          <li>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Restaurante+Oriximiná"
+              target="_blank">
+              Restaurantes próximos
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="card-proximo">
+        <h3>Hospedagem</h3>
+        <ul>
+          <li>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Hotel+Oriximiná"
+              target="_blank">
+              Hotéis próximos
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORIENTAÇÕES -->
+  <section class="dica">
+    <h2>Orientações ao visitante</h2>
+    <p>
+      Utilize os espaços de forma responsável, preserve as estruturas
+      esportivas e respeite as normas de uso para garantir a conservação
+      do local e a segurança de todos.
+    </p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>© 2026 • Prefeitura Municipal de Oriximiná – PA</p>
+  </div>
+</footer>
+
+<script src="../js/header.js"></script>
+<script src="../js/carrossel.js"></script>
+<script src="../js/lightbox.js"></script>
+<script src="../js/rotas.js"></script>
+
 </body>
-
 </html>

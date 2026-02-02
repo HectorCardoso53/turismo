@@ -1,62 +1,126 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-    <title>Parque de Exposição | Oriximiná</title>
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/pontos.css">
+  <meta charset="UTF-8">
+  <title>Parque de Exposição | Oriximiná</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/pontos.css">
 </head>
 
 <body>
 
-    <header class="topo-ponto">
-        <a href="../index.html" class="voltar">← Voltar ao mapa</a>
-        <h1>Parque de Exposição</h1>
-    </header>
+<header class="site-header">
+  <div class="header-inner">
+    <img src="../img/prefeitura.png" alt="Prefeitura de Oriximiná" class="header-logo">
 
-    <main class="conteudo-ponto">
-        <img src="../img/pontos/parque-exposicao.jpg" class="imagem-ponto">
+    <div class="header-text">
+      <span class="header-orgao">Prefeitura Municipal de Oriximiná</span>
+      <h1 class="header-titulo">Parque de Exposição</h1>
+    </div>
+  </div>
+</header>
 
-        <p class="descricao">
-            Local destinado a feiras, exposições agropecuárias e eventos culturais.
-        </p>
+<main class="conteudo-ponto">
 
-        <button class="btn-rota" onclick="abrirRota(-1.7779185, -55.8499679)">
-            🧭 Como chegar
-        </button>
-        <section class="proximos">
-            <h2>O que tem por perto?</h2>
-            <div class="lista-proximos">
-                <div class="card-proximo">
-                    <h3>🍽️ Restaurantes</h3>
-                    <ul>
-                        <li><a target="_blank"
-                                href="https://www.google.com/maps/search/?api=1&query=Restaurante+Oriximiná">Restaurantes
-                                próximos</a></li>
-                    </ul>
-                </div>
-                <div class="card-proximo">
-                    <h3>🏨 Hotéis</h3>
-                    <ul>
-                        <li><a target="_blank"
-                                href="https://www.google.com/maps/search/?api=1&query=Hotel+Oriximiná">Hotéis
-                                próximos</a></li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <section class="dica">
-            <h2>💡 Dica ao visitante</h2>
-            <p>
-                Prefira visitar durante o dia e aproveite para conhecer outros pontos
-                próximos no mapa turístico.
-            </p>
-        </section>
+  <a href="../index.html" class="voltar">← Voltar ao mapa</a>
 
-    </main>
+  <!-- IMAGEM DE DESTAQUE -->
+  <img
+    src="../img/pontos/parque/parque2.jpeg"
+    alt="Parque de Exposição de Oriximiná"
+    class="imagem-ponto"
+  >
 
-    <script src="../js/rotas.js"></script>
+  <p class="descricao">
+    O Parque de Exposição é um espaço destinado à realização de feiras,
+    exposições agropecuárias, eventos culturais e atividades que fortalecem
+    a economia, a cultura e a integração da comunidade de Oriximiná.
+  </p>
+
+  <!-- GALERIA -->
+  <section class="carrossel">
+    <h2>Galeria de Fotos</h2>
+
+    <div class="carrossel-wrapper">
+      <button class="carrossel-btn prev" aria-label="Anterior">‹</button>
+
+      <div class="carrossel-track">
+        <img src="../img/pontos/parque/parque1.jpg" alt="Parque de Exposição">
+        <img src="../img/pontos/parque/parque2.jpeg" alt="Parque de Exposição">
+        <img src="../img/pontos/parque/parque3.jpg" alt="Parque de Exposição">
+        <img src="../img/pontos/parque/parque4.jpeg" alt="Parque de Exposição">
+        <img src="../img/pontos/parque/parque5.jpg" alt="Parque de Exposição">
+      </div>
+
+      <button class="carrossel-btn next" aria-label="Próximo">›</button>
+    </div>
+  </section>
+
+  <!-- ROTA -->
+  <button
+    class="btn-rota"
+    onclick="abrirRota(-1.7779185, -55.8499679)">
+    Como chegar
+  </button>
+
+  <!-- SERVIÇOS PRÓXIMOS -->
+  <section class="proximos">
+    <h2>Serviços nas proximidades</h2>
+
+    <div class="lista-proximos">
+      <div class="card-proximo">
+        <h3>Alimentação</h3>
+        <ul>
+          <li>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Restaurante+Oriximiná"
+              target="_blank">
+              Restaurantes próximos
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="card-proximo">
+        <h3>Hospedagem</h3>
+        <ul>
+          <li>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Hotel+Oriximiná"
+              target="_blank">
+              Hotéis próximos
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORIENTAÇÕES -->
+  <section class="dica">
+    <h2>Orientações ao visitante</h2>
+    <p>
+      Preserve o espaço público, respeite as normas dos eventos
+      realizados no local e contribua para a organização e limpeza
+      do ambiente.
+    </p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>© 2026 • Prefeitura Municipal de Oriximiná – PA</p>
+  </div>
+</footer>
+
+<script src="../js/header.js"></script>
+<script src="../js/carrossel.js"></script>
+<script src="../js/lightbox.js"></script>
+<script src="../js/rotas.js"></script>
+
 </body>
-
 </html>
