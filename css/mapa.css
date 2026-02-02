@@ -92,7 +92,7 @@ body {
   position: absolute;
   bottom: 115%;
   left: 50%;
-  transform: translateX(-50%) scale(0.9);
+  transform: translateX(-50%) scale(0.95);
 
   background: #F2C200;
   color: #082f66;
@@ -108,8 +108,8 @@ body {
   pointer-events: none;
 
   box-shadow: 0 6px 16px rgba(0,0,0,.35);
-
   transition: opacity .2s ease, transform .2s ease;
+
   z-index: 10;
 }
 
@@ -124,7 +124,10 @@ body {
   border-color: #F2C200 transparent transparent transparent;
 }
 
-/* DESKTOP — hover */
+/* =========================
+   DESKTOP — hover
+   ========================= */
+
 @media (hover: hover) {
   .ponto:hover .tooltip,
   .ponto-imagem:hover .tooltip {
@@ -134,7 +137,7 @@ body {
 }
 
 /* =========================
-   MOBILE
+   MOBILE — FIXO (SEMPRE VISÍVEL)
    ========================= */
 
 @media (max-width: 768px) {
@@ -151,21 +154,18 @@ body {
   }
 
   .tooltip {
-    bottom: -42px;
+    opacity: 1;                 /* 🔥 SEMPRE VISÍVEL */
+    bottom: -38px;              /* abaixo do ponto */
     transform: translateX(-50%) scale(1);
+
     font-size: 11px;
     padding: 5px 8px;
-    opacity: 0;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,.25);
   }
 
   .tooltip::after {
     top: -6px;
     border-color: transparent transparent #F2C200 transparent;
-  }
-
-  /* mostra tooltip ao toque */
-  .ponto:focus .tooltip,
-  .ponto-imagem:focus .tooltip {
-    opacity: 1;
   }
 }
