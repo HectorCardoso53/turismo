@@ -153,11 +153,6 @@ body {
   }
 }
 
-
-/* =========================
-   MOBILE — TOOLTIP POR TOQUE
-   ========================= */
-
 @media (max-width: 768px) {
 
   .ponto {
@@ -168,28 +163,34 @@ body {
   }
 
   .ponto-imagem img {
-    width: 42px;
+    width: 42px; /* mantém como está */
   }
 
   .tooltip {
-    opacity: 0;                /* 🔥 começa invisível */
-    bottom: -38px;
+    opacity: 0;
+    bottom: -30px;                /* 🔽 mais próximo */
     left: 50%;
     transform: translateX(-50%) scale(0.95);
 
-    font-size: 11px;
-    padding: 5px 8px;
+    font-size: 16.5px;             /* 🔽 MAIS FINO */
+    font-weight: 600;
+    padding: 3px 6px;             /* 🔽 MENOS ALTURA */
+    line-height: 1.2;             /* 🔽 deixa compacto */
 
-    box-shadow: 0 4px 10px rgba(0,0,0,.25);
+    border-radius: 6px;           /* 🔽 menos gordo */
+    box-shadow: 0 3px 8px rgba(0,0,0,.22);
+
+    white-space: nowrap;
     pointer-events: none;
   }
 
   .tooltip::after {
-    top: -6px;
+    top: -4px;
+    border-width: 4px;            /* 🔽 setinha menor */
     border-color: transparent transparent #F2C200 transparent;
   }
 
-  /* quando ativo */
+  /* quando ativo (1º toque) */
   .ponto.ativo .tooltip,
   .ponto-imagem.ativo .tooltip {
     opacity: 1;
