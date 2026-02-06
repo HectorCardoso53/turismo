@@ -59,8 +59,8 @@ const pontosTuristicos = [
     pagina: "pontos/praca-centenario.html",
     referencia: "img/referencia/centenario.png",
     icon: "🏛️",
-    top: "80%",
-    left: "60%"
+    top: "75%",
+    left: "58%"
   },
   {
     id: "praca-da-saudade",
@@ -108,8 +108,8 @@ const pontosTuristicos = [
     pagina: "pontos/parque-exposicao.html",
     referencia: "img/referencia/parque.png",
     icon: "🎪",
-    top: "85%",
-    left: "65%"
+    top: "80%",
+    left: "70%"
   },
   {
     id: "orla-da-cidade",

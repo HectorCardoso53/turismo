@@ -86,3 +86,54 @@ pontosTuristicos.forEach(ponto => {
   el.appendChild(tooltip);
   container.appendChild(el);
 });
+
+
+// ===============================
+// MOBILE — TOQUE INTELIGENTE
+// ===============================
+
+let pontoAtivo = null;
+
+function isMobile() {
+  return window.matchMedia("(max-width: 768px)").matches;
+}
+
+document.querySelectorAll(".ponto, .ponto-imagem").forEach(ponto => {
+
+  ponto.addEventListener("click", (e) => {
+
+    if (!isMobile()) return; // desktop segue normal
+
+    // se não estiver ativo → só mostra tooltip
+    if (!ponto.classList.contains("ativo")) {
+      e.preventDefault();
+
+      // fecha o anterior
+      if (pontoAtivo && pontoAtivo !== ponto) {
+        pontoAtivo.classList.remove("ativo");
+      }
+
+      ponto.classList.add("ativo");
+      pontoAtivo = ponto;
+
+      return;
+    }
+
+    // se já está ativo → permite navegar
+    ponto.classList.remove("ativo");
+    pontoAtivo = null;
+    // NÃO usa preventDefault → link abre
+  });
+});
+
+// fecha tooltip ao tocar fora
+document.addEventListener("click", (e) => {
+  if (!isMobile()) return;
+
+  if (!e.target.closest(".ponto, .ponto-imagem")) {
+    if (pontoAtivo) {
+      pontoAtivo.classList.remove("ativo");
+      pontoAtivo = null;
+    }
+  }
+});

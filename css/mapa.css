@@ -84,60 +84,78 @@ body {
   transform: scale(1.05);
 }
 
+
+
 /* =========================
-   TOOLTIP (BALÃO)
+   TOOLTIP (BALÃO) — DESKTOP
    ========================= */
+
+/* =========================
+   TOOLTIP — NASCE DO CÍRCULO
+   ========================= */
+
 
 .tooltip {
   position: absolute;
-  bottom: 115%;
-  left: 50%;
-  transform: translateX(-50%) scale(0.95);
+
+  /* 🔥 alinhado ao meio do ponto */
+  top: 80%;
+  left: 23%;
+
+  /* começa dentro do círculo */
+  transform: translate(-50%, -50%) scale(0.6);
 
   background: #F2C200;
   color: #082f66;
 
-  padding: 6px 10px;
-  border-radius: 8px;
+  padding: 8px 12px;
+  border-radius: 10px;
 
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   white-space: nowrap;
 
   opacity: 0;
   pointer-events: none;
 
-  box-shadow: 0 6px 16px rgba(0,0,0,.35);
-  transition: opacity .2s ease, transform .2s ease;
+  box-shadow: 0 10px 22px rgba(0,0,0,.35);
 
-  z-index: 10;
+  transition:
+    opacity .2s ease,
+    transform .25s ease;
+
+  z-index: 20;
 }
 
+/* setinha lateral */
 .tooltip::after {
   content: "";
   position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  border-width: 6px;
+  top: 50%;
+  left: -7px;
+  transform: translateY(-50%);
+
+  border-width: 7px;
   border-style: solid;
-  border-color: #F2C200 transparent transparent transparent;
+  border-color: transparent #F2C200 transparent transparent;
 }
 
 /* =========================
    DESKTOP — hover
    ========================= */
-
 @media (hover: hover) {
   .ponto:hover .tooltip,
   .ponto-imagem:hover .tooltip {
     opacity: 1;
-    transform: translateX(-50%) scale(1.05);
+
+    /* 🔥 sai pro lado do círculo */
+    transform: translate(calc(-50% + 34px), -50%) scale(1);
   }
 }
 
+
 /* =========================
-   MOBILE — FIXO (SEMPRE VISÍVEL)
+   MOBILE — TOOLTIP POR TOQUE
    ========================= */
 
 @media (max-width: 768px) {
@@ -154,18 +172,28 @@ body {
   }
 
   .tooltip {
-    opacity: 1;                 /* 🔥 SEMPRE VISÍVEL */
-    bottom: -38px;              /* abaixo do ponto */
-    transform: translateX(-50%) scale(1);
+    opacity: 0;                /* 🔥 começa invisível */
+    bottom: -38px;
+    left: 50%;
+    transform: translateX(-50%) scale(0.95);
 
     font-size: 11px;
     padding: 5px 8px;
 
     box-shadow: 0 4px 10px rgba(0,0,0,.25);
+    pointer-events: none;
   }
 
   .tooltip::after {
     top: -6px;
     border-color: transparent transparent #F2C200 transparent;
   }
+
+  /* quando ativo */
+  .ponto.ativo .tooltip,
+  .ponto-imagem.ativo .tooltip {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
 }
+
