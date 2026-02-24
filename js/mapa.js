@@ -1,7 +1,6 @@
 const container = document.querySelector(".mapa-container");
 
-pontosTuristicos.forEach(ponto => {
-
+pontosTuristicos.forEach((ponto) => {
   /* ============================
      CASO 1 — PONTO COM IMAGEM
      ============================ */
@@ -78,15 +77,12 @@ pontosTuristicos.forEach(ponto => {
   const tooltip = document.createElement("span");
   tooltip.classList.add("tooltip");
   tooltip.textContent =
-    ponto.status === "andamento"
-      ? `${ponto.nome} • Em andamento`
-      : ponto.nome;
+    ponto.status === "andamento" ? `${ponto.nome} • Em andamento` : ponto.nome;
 
   el.appendChild(icon);
   el.appendChild(tooltip);
   container.appendChild(el);
 });
-
 
 // ===============================
 // MOBILE — TOQUE INTELIGENTE
@@ -98,17 +94,14 @@ function isMobile() {
   return window.matchMedia("(max-width: 768px)").matches;
 }
 
-document.querySelectorAll(".ponto, .ponto-imagem").forEach(ponto => {
-
+document.querySelectorAll(".ponto, .ponto-imagem").forEach((ponto) => {
   ponto.addEventListener("click", (e) => {
-
     if (!isMobile()) return; // desktop segue normal
 
     // se não estiver ativo → só mostra tooltip
     if (!ponto.classList.contains("ativo")) {
       e.preventDefault();
 
-      // fecha o anterior
       if (pontoAtivo && pontoAtivo !== ponto) {
         pontoAtivo.classList.remove("ativo");
       }
@@ -116,9 +109,24 @@ document.querySelectorAll(".ponto, .ponto-imagem").forEach(ponto => {
       ponto.classList.add("ativo");
       pontoAtivo = ponto;
 
+      // texto
+      globalTooltip.textContent = ponto.textContent.trim();
+
+      // posição
+      const rect = ponto.getBoundingClientRect();
+      const containerRect = container.getBoundingClientRect();
+
+      globalTooltip.style.left =
+        rect.left - containerRect.left + rect.width / 2 + "px";
+
+      globalTooltip.style.top = rect.top - containerRect.top - 10 + "px";
+
+      globalTooltip.style.transform = "translate(-50%, -100%)";
+
+      globalTooltip.style.display = "block";
+
       return;
     }
-
     // se já está ativo → permite navegar
     ponto.classList.remove("ativo");
     pontoAtivo = null;
@@ -137,3 +145,8 @@ document.addEventListener("click", (e) => {
     }
   }
 });
+
+// sobe o ponto ativo para o topo real
+function bringToFront(element) {
+  element.parentNode.appendChild(element);
+}

@@ -198,3 +198,30 @@ body {
   }
 }
 
+/* quando estiver ativo no mobile */
+.ponto.ativo,
+.ponto-imagem.ativo {
+  z-index: 9999;
+}
+
+
+.tooltip {
+  position: absolute;
+  z-index: 10000;
+}
+
+
+.tooltip-global {
+  position: absolute;
+  background: #F2C200;
+  color: #082f66;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  box-shadow: 0 8px 20px rgba(0,0,0,.35);
+  z-index: 999999; /* 🔥 sempre acima */
+  pointer-events: none;
+  display: none;
+}
